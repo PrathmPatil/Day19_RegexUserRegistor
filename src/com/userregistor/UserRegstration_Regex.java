@@ -4,6 +4,7 @@ import java.util.regex.Pattern;
 
 public class UserRegstration_Regex {
   static String fName;
+  static String lName;
  
   
 	 static String fname()
@@ -19,7 +20,22 @@ public class UserRegstration_Regex {
 			 */
 			return fName;
 	   }
-	
+	 /*
+	  * last name enter 
+	  */
+	 static String lname()
+	   {    
+		 Scanner sc= new Scanner(System.in);
+			/*
+			 * give user input 
+			 */
+			System.out.print("Enter First Name: ");
+			fName=sc.next();
+			/*
+			 * check enterd name are math with pattern
+			 */
+			return fName;
+	   }
 	 /*
 	  * Display Output
 	  */
@@ -39,7 +55,10 @@ public class UserRegstration_Regex {
 	public static void main(String[] args) {
 		
 		String uFname=fname();
+		String uLname=lname();
 		System.out.println("First Name :: ");
 		display(uFname);
+		System.out.println("Last Name :: ");
+		display(uLname);
 	}
 }

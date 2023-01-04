@@ -6,6 +6,7 @@ public class UserRegstration_Regex {
   static String fName;
   static String lName;
   static String gmail;
+  static String mNumber;
  
   
 	 static String fname()
@@ -37,6 +38,28 @@ public class UserRegstration_Regex {
 			 */
 			return fName;
 	   }
+	 /*
+	  * enter mobile number
+	  */
+	 static String mobileNumber()
+	 {
+		 Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter Mobile Number");
+		 mNumber=sc.nextLine();
+		 return mNumber;
+	 }
+	 static void displayMobileNumber(String mNumber)
+	 {
+		 boolean mobNumber= Pattern.matches("^[+]?{1}[0-9]{2}[\s]?{1}[7-9]{1}[0-9]{9}$", mNumber);
+		if(mobNumber==true)
+		{
+			System.out.println("Enterd number "+mNumber+" are Valid.");
+		}
+		else 
+		{
+			System.out.println("Enterd number "+mNumber+" are not valid");
+		}
+	 }
 	 /*
 	  * Display Output
 	  */
@@ -85,10 +108,12 @@ public class UserRegstration_Regex {
 		String uFname=fname();
 		String uLname=lname();
 		String uGmail=eGmail();
+		String uMnumber=mobileNumber();
 		System.out.println("First Name :: ");
 		display(uFname);
 		System.out.println("Last Name :: ");
 		display(uLname);
 		gmailDisplay(uGmail);
+		displayMobileNumber(uMnumber);
 	}
 }

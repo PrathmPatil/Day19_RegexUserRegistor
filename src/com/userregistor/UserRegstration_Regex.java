@@ -69,7 +69,7 @@ public class UserRegstration_Regex {
 	 }
 	 static void passWardDisplay(String passward)
 	 {
-		 boolean passWard=Pattern.matches("^[A-za-z0-9(@#$%*+-_.)]{8,}$", passward);
+		 boolean passWard=Pattern.matches("^(=?.*[A-Z]).*[a-z0-9(@#$%*+-_.)]{8,}$", passward);
 		 if(passWard==true)
 			 System.out.println("Enterd Passward are valid");
 		 else

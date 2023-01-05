@@ -7,7 +7,7 @@ public class UserRegstration_Regex {
   static String lName;
   static String gmail;
   static String mNumber;
- 
+  static String passward;
   
 	 static String fname()
 	   {    
@@ -60,6 +60,21 @@ public class UserRegstration_Regex {
 			System.out.println("Enterd number "+mNumber+" are not valid");
 		}
 	 }
+	 static String passWard()
+	 {
+		 Scanner sc= new Scanner(System.in);
+		 System.out.println("Enter Passward (minimum 8 characters): ");
+		 passward=sc.next();
+		 return passward;
+	 }
+	 static void passWardDisplay(String passward)
+	 {
+		 boolean passWard=Pattern.matches("^[A-za-z0-9(@#$%*+-_.)]{8,}$", passward);
+		 if(passWard==true)
+			 System.out.println("Enterd Passward are valid");
+		 else
+			 System.out.println("Enterd Passward are not valid");
+	 }
 	 /*
 	  * Display Output
 	  */
@@ -109,11 +124,14 @@ public class UserRegstration_Regex {
 		String uLname=lname();
 		String uGmail=eGmail();
 		String uMnumber=mobileNumber();
+		String uPassward=passWard();
 		System.out.println("First Name :: ");
 		display(uFname);
 		System.out.println("Last Name :: ");
 		display(uLname);
 		gmailDisplay(uGmail);
 		displayMobileNumber(uMnumber);
+		passWardDisplay(uPassward);
+		
 	}
 }

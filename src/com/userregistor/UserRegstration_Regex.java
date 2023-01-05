@@ -131,6 +131,7 @@ public class UserRegstration_Regex {
 		display(uLname);
 		gmailDisplay(uGmail);
 		displayMobileNumber(uMnumber);
+		
 		passWardDisplay(uPassward);
 		
 	}
